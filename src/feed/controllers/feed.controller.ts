@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 import { DeleteResult, UpdateResult } from 'typeorm';
 
 import { FeedService } from '../services/feed.service';
-import { FeedPost } from '../models/post.interface';
+import { FeedPost } from '../../typeorm/interfaces/post.interface';
 
 @Controller('feed')
 export class FeedController {
