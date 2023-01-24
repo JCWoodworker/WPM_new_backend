@@ -3,7 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductsModule } from '../practice_files/products/products.module';
+import { FeedModule } from './feed/feed.module';
 
 @Module({
   imports: [
@@ -17,7 +17,8 @@ import { ProductsModule } from '../practice_files/products/products.module';
       database: process.env.POSTGRES_DB,
       autoLoadEntities: true,
       synchronize: true,
-    })
+    }),
+    FeedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
