@@ -11,11 +11,11 @@ export class UserEntity {
   @Column()
   lastName: string;
 
-  @Column()
-  cellphone: number;
+  // @Column()
+  // cellphone: number;
 
-  @Column()
-  email: string;
+  // @Column()
+  // email: string;
 
   @Column()
   password: string;
