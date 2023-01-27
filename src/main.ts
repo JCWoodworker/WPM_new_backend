@@ -1,6 +1,5 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import 'tsconfig-paths/register'
 import 'dotenv/config'
 
 const cors = require('cors');
