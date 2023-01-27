@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { Observable, from } from 'rxjs';
 
-import { FeedPostEntity } from '../models/post.entity';
-import { FeedPost } from '../models/post.interface';
+import { FeedPostEntity } from '../../typeorm/entities/post.entity';
+import { FeedPost } from '../../typeorm/interfaces/post.interface';
 
 @Injectable()
 export class FeedService {
