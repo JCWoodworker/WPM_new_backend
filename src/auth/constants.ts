@@ -1,5 +1,5 @@
-// THIS IS FOR TESTING PURPOSES ... PUT AN ACTUAL SECRET KEY IN AN ENV FILE!!!!!!!!!!
+import 'dotenv/config'
 
 export const jwtConstants = {
-  secret: 'thisCanBeAnythingANDmakeSureToPutItInAnEnvFile',
+  secret: process.env.SECRET
 };
