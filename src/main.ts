@@ -1,5 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import 'tsconfig-paths/register'
+
 const cors = require('cors');
 
 async function bootstrap() {
