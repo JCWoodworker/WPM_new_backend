@@ -31,8 +31,4 @@ export class UsersService {
     return hash
   }
 
-  async decryptPassword(password: string, hash: string): Promise<boolean> {
-    const result = await bcrypt.compare(password, hash);
-    return result;
-  }
 }
