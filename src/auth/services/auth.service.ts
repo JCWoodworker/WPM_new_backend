@@ -19,8 +19,17 @@ export class AuthService {
     return null;
   }
 
+  async getUserInfo(username: string): Promise<any> {
+    const user = await this.usersService.findOne(username);
+    if (user) {
+      const { password, ...result } = user;
+      return result;
+    }
+    return null;
+  }
+
   async login(user: any) {
-    const payload = { username: user.username, sub: user.userId };
+    const payload = { username: user.username, sub: user.userId, userType: user.userType };
     return {
       access_token: this.jwtService.sign(payload),
     };
