@@ -8,7 +8,7 @@ export class ProjectEntity {
   @Column({})
   name: string;
 
-  @Column({})
+  @Column({ nullable: true })
   customerId: number;
 
   @Column({})
