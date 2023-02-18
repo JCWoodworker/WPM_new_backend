@@ -36,8 +36,10 @@ export class AuthService {
       sub: user.userId,
       userType: user.userType,
     }
+    const currentUser = await this.getUserInfo(user.username)
         return {
       access_token: this.jwtService.sign(payload),
+      user: currentUser
     }
   }
 
