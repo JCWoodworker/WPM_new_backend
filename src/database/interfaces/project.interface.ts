@@ -1,10 +1,10 @@
 export interface ProjectInterface {
   projectId?: number;
   name?: string;
-  customerId?: string;
-  userid?: string;
+  customerId?: number;
+  userid?: number;
   description?: string;
-  quantity?: string;
-  laborHours?: string;
+  quantity?: number;
+  laborHours?: number;
   stage?: string;
 }

@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersController } from './modules/users/controllers/users.controller';
 import { ProjectsModule } from './modules/projects/projects.module';
+import { ProjectsController } from './modules/projects/controllers/projects.controler'
 import { DatabaseModule } from './database/database.module';
 
 @Module({
@@ -18,7 +19,7 @@ import { DatabaseModule } from './database/database.module';
     UsersModule,
     ProjectsModule,
   ],
-  controllers: [AppController, UsersController],
+  controllers: [AppController, UsersController, ProjectsController],
   providers: [AppService],
 })
 export class AppModule {}

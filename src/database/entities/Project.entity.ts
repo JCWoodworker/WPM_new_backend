@@ -5,24 +5,27 @@ export class ProjectEntity {
   @PrimaryGeneratedColumn()
   projectId: number;
 
-  @Column({ nullable: false })
+  @Column({})
   name: string;
 
-  @Column({ nullable: false })
-  description: string;
-
-  @Column({ unique: true, nullable: false })
-  stage: string;
-
-  @Column({ nullable: false })
+  @Column({})
   customerId: number;
 
-  @Column({ nullable: false})
+  @Column({})
+  userId: number;
+
+  @Column({})
+  description: string;
+
+  @Column({})
   quantity: number;
-
-  @Column({ nullable: false})
+  
+  @Column({})
   laborHours: number;
+  
+  @Column({})
+  stage: string;
 
-  @Column({ nullable: false})
-  userid: string;
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
 }
