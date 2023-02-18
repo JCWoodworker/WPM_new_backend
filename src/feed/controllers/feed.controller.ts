@@ -13,7 +13,7 @@ import { DeleteResult, UpdateResult } from 'typeorm';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 import { FeedService } from '../services/feed.service';
-import { FeedPost } from '../../typeorm/interfaces/post.interface';
+import { FeedPost } from '../../database/interfaces/post.interface';
 
 @Controller('feed')
 export class FeedController {
