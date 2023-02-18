@@ -12,7 +12,7 @@ import { LocalAuthGuard } from 'src/auth/local-auth.guard';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { AuthService } from 'src/auth/services/auth.service';
 import { UsersService } from '../services/users.service';
-import { UserInterface } from '../../database/interfaces/user.interface';
+import { UserInterface } from '../../../database/interfaces/user.interface';
 
 @Controller('users')
 export class UsersController {
