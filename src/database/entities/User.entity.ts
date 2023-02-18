@@ -25,4 +25,8 @@ export class UserEntity {
 
   @Column({ nullable: false})
   userType: string;
+ 
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
+
 }
