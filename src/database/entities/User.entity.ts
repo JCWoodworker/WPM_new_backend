@@ -2,8 +2,8 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'users' })
 export class UserEntity {
-  @PrimaryGeneratedColumn()
-  userId: number;
+  @PrimaryGeneratedColumn("uuid")
+  userId: string;
 
   @Column({ nullable: false })
   firstName: string;
@@ -17,13 +17,13 @@ export class UserEntity {
   // @Column()
   // cellphone: number;
 
-  // @Column()
+  // @Column({ nullable: true })
   // email: string;
 
   @Column({ nullable: false })
   password: string;
 
-  @Column({ nullable: false})
+  @Column({ nullable: false })
   userType: string;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
