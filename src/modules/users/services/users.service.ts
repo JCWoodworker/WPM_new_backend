@@ -47,6 +47,10 @@ export class UsersService {
     return this.userRepository.findOne({ where: { username } });
   }
 
+  async findById(userId: string): Promise<User | undefined> {
+    return this.userRepository.findOne({ where: { userId } });
+  }
+
   async encryptPassword(password: string): Promise<string> {
     const saltRounds = 10;
     const hash = await bcrypt.hash(password, saltRounds);

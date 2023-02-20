@@ -9,7 +9,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './modules/users/users.module';
 import { UsersController } from './modules/users/controllers/users.controller';
 import { ProjectsModule } from './modules/projects/projects.module';
-import { ProjectsController } from './modules/projects/controllers/projects.controler'
+import { ProjectsController } from './modules/projects/projects.controler'
 
 @Module({
   imports: [
