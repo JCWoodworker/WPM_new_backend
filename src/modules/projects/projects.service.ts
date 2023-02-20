@@ -16,4 +16,8 @@ export class ProjectsService {
   async createProject(project: ProjectInterface): Promise<Project> {
     return await this.projectRepository.save(project);
   }
+
+  async findUserProjects(): Promise<Project[]> {
+    return await this.projectRepository.find();
+  }
 }

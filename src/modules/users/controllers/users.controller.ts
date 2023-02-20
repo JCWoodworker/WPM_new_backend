@@ -27,13 +27,6 @@ export class UsersController {
     return this.authService.login(req.user);
   }
 
-  // This was just a sample route to test the JWT guard.  It is not needed for this project.
-  // @UseGuards(JwtAuthGuard)
-  // @Get('profile')
-  // getProfile(@Request() req: any) {
-  //   return this.authService.getUserInfo(req.user.username);
-  // }
-
   @Post('register')
   async registerUser(@Body() newUser: UserInterface) {
     return this.usersService.register(newUser);

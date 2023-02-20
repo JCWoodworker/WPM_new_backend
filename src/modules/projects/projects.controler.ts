@@ -10,7 +10,8 @@ import {
 
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { ProjectInterface } from 'src/database/interfaces/project.interface';
-import { ProjectsService } from '../services/projects.service';
+import { ProjectsService } from './projects.service';
+
 @Controller('projects')
 export class ProjectsController {
   constructor(
@@ -21,6 +22,15 @@ export class ProjectsController {
   @Post('newProject')
   async newProject(@Body() newProject: ProjectInterface) {
     return this.projectsService.createProject(newProject);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get()
+  async userProjects() {
+    debugger
+    const response = this.projectsService.findUserProjects();
+    debugger
+    return response;
   }
 
 
