@@ -17,7 +17,8 @@ export class ProjectsService {
     return await this.projectRepository.save(project);
   }
 
-  async findUserProjects(): Promise<Project[]> {
-    return await this.projectRepository.find();
+  async findUserProjects(userId: string): Promise<Project[]> {
+    debugger
+    return await this.projectRepository.find({ where: { userId: userId }});
   }
 }

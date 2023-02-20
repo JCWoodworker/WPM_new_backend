@@ -14,10 +14,8 @@ import { ProjectsService } from './projects.service';
 
 @Controller('projects')
 export class ProjectsController {
-  constructor(
-    private projectsService: ProjectsService,
-    ) {}
-    
+  constructor(private projectsService: ProjectsService) {}
+
   @UseGuards(JwtAuthGuard)
   @Post('newProject')
   async newProject(@Body() newProject: ProjectInterface) {
@@ -26,12 +24,8 @@ export class ProjectsController {
 
   @UseGuards(JwtAuthGuard)
   @Get()
-  async userProjects() {
-    debugger
-    const response = this.projectsService.findUserProjects();
-    debugger
-    return response;
+  async userProjects(@Request() req) {
+    const userId = req.user.userId;
+    return this.projectsService.findUserProjects(userId);
   }
-
-
 }
