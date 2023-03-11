@@ -18,7 +18,6 @@ export class ProjectsService {
   }
 
   async findUserProjects(userId: string): Promise<Project[]> {
-    debugger
     return await this.projectRepository.find({ where: { userId: userId }});
   }
 }
