@@ -6,11 +6,13 @@ import { DatabaseModule } from './database/database.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+
 import { UsersModule } from './modules/users/users.module';
 import { UsersController } from './modules/users/users.controller';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { ProjectsController } from './modules/projects/projects.controler'
-
+import { HardwoodsModule } from './modules/hardwoods/hardwoods.module';
+import { HardwoodsController } from './modules/hardwoods/hardwoods.controler';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -18,8 +20,9 @@ import { ProjectsController } from './modules/projects/projects.controler'
     AuthModule,
     UsersModule,
     ProjectsModule,
+    HardwoodsModule,
   ],
-  controllers: [AppController, UsersController, ProjectsController],
+  controllers: [AppController, UsersController, ProjectsController, HardwoodsController],
   providers: [AppService],
 })
 export class AppModule {}
