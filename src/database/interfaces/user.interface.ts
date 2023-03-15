@@ -3,6 +3,8 @@ export interface UserInterface {
   firstName?: string;
   lastName?: string;
   username?: string;
+  cellPhone?: number;
+  email?: string;
   password?: string;
   userType?: string;
 }
