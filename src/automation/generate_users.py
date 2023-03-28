@@ -1,6 +1,8 @@
 import requests
 import json
 
+# This seeds a list of fake users to the database for testing login and registration
+
 usernames = [
     "fakeUser0",
     "fakeUser1",

@@ -1,5 +1,7 @@
 import os
 
+# This script will generate a new table in the database (entity and interface), and a new module, controller, ans service in a directory named after the table within the modules directory
+
 new_table_name = input("\nEnter the name of the new table: ")
 
 directory_database = os.path.expanduser("~/MyProjects/woodworker_project_manager/server/src/database")
