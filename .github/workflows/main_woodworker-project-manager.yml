@@ -27,6 +27,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+          zip -r server.zip ../server   
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -54,4 +55,4 @@ jobs:
           app-name: 'woodworker-project-manager'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7529313A87B646D786D40E40DE7A389B }}
-          package: .
+          package: ./server.zip
