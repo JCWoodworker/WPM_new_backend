@@ -22,7 +22,6 @@
     "migration:run": "cd src/database/migrations && npx typeorm-ts-node-commonjs migration:run -v"
   },
   "dependencies": {
-    "@jridgewell/sourcemap-codec": "^1.4.15",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
