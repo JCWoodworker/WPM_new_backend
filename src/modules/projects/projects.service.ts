@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 
 import { ProjectInterface } from 'src/database/interfaces/project.interface';
-import { ProjectEntity } from 'src/database/entities/project.entity';
+import { ProjectEntity } from 'src/database/entities/Project.entity';
 export type Project = any;
 
 @Injectable()
