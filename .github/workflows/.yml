@@ -1,0 +1,32 @@
+name: Build and Deploy to Azure App Service
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the app
+      run: npm run build
+
+    - name: Deploy the app to Azure App Service
+      server: your-ftp-server-url
+        username: woodworker-project-manager\$woodworker-project-manager
+        password: 495G0sBXAZvMgpZeQbXkzPjH56CL9wDglagxpFxPetsfqQQmwN2RM0G2qDLX
+        local-dir: ./build
+        remote-dir: ftps://waws-prod-blu-427.ftp.azurewebsites.windows.net/site/wwwroot
+        timeout: 120000
