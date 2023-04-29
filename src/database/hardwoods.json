@@ -1,0 +1,38 @@
+[
+  {
+  "id": "f8ca23cc-2996-4225-a92b-9875d2d1e72b",
+  "name": "hw001",
+  "price": "12",
+  "priceType": "bf",
+  "region": "na",
+  "jankaHardness": 1234,
+  "imageUrl": "somewhere"
+  },
+  {
+  "id": "bf8ce39b-7eca-4b05-9573-33c73216e785",
+  "name": "hw002",
+  "price": "11",
+  "priceType": "bf",
+  "region": "na",
+  "jankaHardness": 4000,
+  "imageUrl": "somewhere"
+  },
+  {
+  "id": "ce748331-a88e-43bf-bbb8-d065841e8bf8",
+  "name": "hw003",
+  "price": "5",
+  "priceType": "bf",
+  "region": "na",
+  "jankaHardness": 3000,
+  "imageUrl": "somewhere"
+  },
+  {
+  "id": "9ff97e73-3431-4400-a52e-cfcc66bae2ff",
+  "name": "hw004",
+  "price": "6",
+  "priceType": "lf",
+  "region": "na",
+  "jankaHardness": 2000,
+  "imageUrl": "somewhere"
+  }
+  ]

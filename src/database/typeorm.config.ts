@@ -20,6 +20,7 @@ const config: TypeOrmModuleOptions = {
         },
       }
     : undefined,
+  migrations: [__dirname + '/../migrations/*{.ts,.js}'],
 }
 
 export default config
