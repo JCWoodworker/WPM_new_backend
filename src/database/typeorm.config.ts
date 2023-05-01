@@ -10,6 +10,12 @@ const config: TypeOrmModuleOptions = {
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   autoLoadEntities: true,
   synchronize: true,
+  logging: false,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 };
 
 export default config;
