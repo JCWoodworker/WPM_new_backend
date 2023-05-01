@@ -42,6 +42,7 @@
     "ph": "^0.1.10",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
+    "tsconfig-paths": "^4.2.0",
     "typeorm": "^0.3.12"
   },
   "engines": {
@@ -69,7 +70,6 @@
     "ts-jest": "29.0.3",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
-    "tsconfig-paths": "^4.1.2",
     "typescript": "^4.7.4",
     "webpack": "^5.75.0"
   },
