@@ -1,4 +1,6 @@
-import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm'
+
+const isProduction = process.env.NODE_ENV === 'production'
 
 const config: TypeOrmModuleOptions = {
   type: 'postgres',
@@ -11,11 +13,13 @@ const config: TypeOrmModuleOptions = {
   autoLoadEntities: true,
   synchronize: true,
   logging: false,
-  extra: {
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  },
-};
+  extra: isProduction
+    ? {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      }
+    : undefined,
+}
 
-export default config;
+export default config
