@@ -8,7 +8,7 @@ import {
 
 import { LocalAuthGuard } from 'src/auth/local-auth.guard';
 import { AuthService } from 'src/auth/services/auth.service';
-import { UserInterface } from '../../database/interfaces/user.interface';
+import { UserInterface } from '../../database/entities/interfaces/user.interface';
 import { UsersService } from './users.service';
 
 @Controller('users')

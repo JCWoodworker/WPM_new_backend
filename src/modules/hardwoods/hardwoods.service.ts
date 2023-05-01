@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 
 import { HardwoodEntity } from 'src/database/entities/Hardwood.entity';
-import { HardwoodInterface } from 'src/database/interfaces/hardwood.interface';
+import { HardwoodInterface } from 'src/database/entities/interfaces/hardwood.interface';
 export type Hardwood = any;
 
 @Injectable()
