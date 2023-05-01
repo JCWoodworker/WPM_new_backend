@@ -7,7 +7,7 @@ export class createHardwoodsTable1681185475372 implements MigrationInterface {
             "name" VARCHAR NOT NULL,
             "region" VARCHAR NOT NULL,
             "jankaHardness" INTEGER NOT NULL,
-            "price" INT NOT NULL,
+            "price" INTEGER NOT NULL,
             "priceType" VARCHAR NOT NULL,
             "imageUrl" VARCHAR NOT NULL,
             "createdAt" TIMESTAMP NOT NULL DEFAULT now(),
