@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { ProjectInterface } from 'src/database/entities/interfaces/project.interface';
+import { ProjectInterface } from 'src/database/interfaces/project.interface';
 import { ProjectsService } from './projects.service';
 
 @Controller('projects')

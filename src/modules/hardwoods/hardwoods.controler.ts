@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { HardwoodInterface } from 'src/database/entities/interfaces/hardwood.interface';
+import { HardwoodInterface } from 'src/database/interfaces/hardwood.interface';
 import { HardwoodsService } from './hardwoods.service';
 
 @Controller('hardwoods')
