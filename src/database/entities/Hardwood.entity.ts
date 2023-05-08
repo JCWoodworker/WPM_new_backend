@@ -14,12 +14,6 @@ export class HardwoodEntity {
   @Column({ nullable: false, type: 'int' })
   jankaHardness: number;
 
-  @Column({ nullable: true, type: 'numeric' })
-  price: number;
-
-  @Column({ nullable: false, type: 'varchar' })
-  priceType: string;
-
   @Column({ nullable: false, type: 'varchar' })
   imageUrl: string;
 

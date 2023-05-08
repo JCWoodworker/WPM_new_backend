@@ -23,8 +23,6 @@ export class HardwoodsService {
       return {
         id: hardwood.hardwoodId,
         name: hardwood.name,
-        price: hardwood.price,
-        priceType: hardwood.priceType,
         region: hardwood.region,
         jankaHardness: hardwood.jankaHardness,
         imageUrl: hardwood.imageUrl,

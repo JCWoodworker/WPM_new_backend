@@ -3,7 +3,5 @@ export interface HardwoodInterface {
   name?: string;
   region?: string;
   jankaHardness?: number;
-  price?: number;
-  priceType?: string;
   imageUrl?: string;
 }
