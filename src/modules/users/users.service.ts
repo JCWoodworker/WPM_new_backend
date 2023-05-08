@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 
-import { UserInterface } from '../../database/entities/interfaces/user.interface';
+import { UserInterface } from '../../database/interfaces/user.interface';
 import { UserEntity } from 'src/database/entities/User.entity';
 
 export type User = any;
