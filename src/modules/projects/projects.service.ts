@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DeleteResult, Repository, UpdateResult } from 'typeorm';
+import { Repository } from 'typeorm';
 
 import { ProjectInterface } from 'src/database/interfaces/project.interface';
 import { ProjectEntity } from 'src/database/entities/Project.entity';
