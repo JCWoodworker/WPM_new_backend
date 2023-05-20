@@ -32,4 +32,7 @@ export class UserEntity {
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createdAt: Date;
+
+  @Column({ type: 'varchar', nullable: false  })
+  userIp: string;
 }
