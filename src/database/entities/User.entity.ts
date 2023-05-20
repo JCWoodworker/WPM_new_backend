@@ -31,8 +31,8 @@ export class UserEntity {
   userType: string
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
-  createdAt: Date
+  createdAt: Date;
 
-  @Column({ nullable: false, type: 'varchar' })
-  userIp: string
+  @Column({ type: 'varchar', nullable: false  })
+  userIp: string;
 }
