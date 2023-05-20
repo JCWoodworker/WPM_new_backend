@@ -15,7 +15,8 @@ export class UsersService {
     private readonly userRepository: Repository<UserEntity>,
   ) {}
 
-  async register(user: UserInterface): Promise<User> {
+  async register(user: UserInterface, userIp: string): Promise<User> {
+    console.log(userIp)
     const encryptedPassword = await this.encryptPassword(user.password);
     user.password = encryptedPassword;
     user.cellPhone = Number(user.cellPhone);
