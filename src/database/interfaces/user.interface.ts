@@ -7,4 +7,5 @@ export interface UserInterface {
   email?: string;
   password?: string;
   userType?: string;
+  userIp?: string;
 }
