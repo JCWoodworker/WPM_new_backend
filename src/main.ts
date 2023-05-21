@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const port = process.env.PORT || 3000;
   app.use(cors({
-    origin: 'https://woodproman.com'
+    origin: 'https://woodpromanpreprod.com'
   }));
 
   await app.listen(port);
