@@ -13,8 +13,9 @@ export class createUsersTable1681185357273 implements MigrationInterface {
                 "email" VARCHAR NOT NULL,
                 "password" VARCHAR NOT NULL,
                 "userType" VARCHAR NOT NULL,
+                "userIp" VARCHAR NOT NULL,
                 "createdAt" TIMESTAMP NOT NULL DEFAULT now(),
-                "userIp" VARCHAR NOT NULL
+                "updatedAt" TIMESTAMP NOT NULL DEFAULT now()
             )
         `);
     }
