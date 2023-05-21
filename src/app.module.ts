@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 import { AuthModule } from './auth/auth.module';
@@ -27,8 +26,4 @@ import { HardwoodsController } from './modules/hardwoods/hardwoods.controler';
   controllers: [AppController, UsersController, ProjectsController, HardwoodsController],
   providers: [AppService],
 })
-export class AppModule implements NestModule {
-  configure(consumer: any) {
-    consumer.apply(CorsMiddleware).forRoutes('*');
-  }
-}
+export class AppModule {}
