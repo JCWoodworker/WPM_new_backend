@@ -38,5 +38,4 @@ export class UserEntity {
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   updatedAt: Date;
-
 }
