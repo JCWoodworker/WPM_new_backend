@@ -12,7 +12,7 @@ export class createProjectsTable1681185483362 implements MigrationInterface {
         "quantity" INTEGER NOT NULL,
         "laborHours" INTEGER NOT NULL,
         "stage" VARCHAR NOT NULL,
-        "createdAt" TIMESTAMP NOT NULL DEFAULT now()
+        "createdAt" TIMESTAMP NOT NULL DEFAULT now(),
         "updatedAt" TIMESTAMP NOT NULL DEFAULT now()
       )
     `);
