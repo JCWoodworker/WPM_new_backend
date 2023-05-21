@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 import { AuthModule } from './auth/auth.module';
@@ -15,8 +14,6 @@ import { ProjectsController } from './modules/projects/projects.controler'
 import { HardwoodsModule } from './modules/hardwoods/hardwoods.module';
 import { HardwoodsController } from './modules/hardwoods/hardwoods.controler';
 
-import { CorsMiddleware } from './middleware/cors.middleware';
-
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -29,8 +26,4 @@ import { CorsMiddleware } from './middleware/cors.middleware';
   controllers: [AppController, UsersController, ProjectsController, HardwoodsController],
   providers: [AppService],
 })
-export class AppModule implements NestModule {
-  configure(consumer: any) {
-    consumer.apply(CorsMiddleware).forRoutes('*');
-  }
-}
+export class AppModule {}
