@@ -4,6 +4,8 @@ import os
 
 new_table_name = input("\nEnter the name of the new table: ")
 
+
+
 directory_database = os.path.expanduser("~/MyProjects/woodworker_project_manager/server/src/database")
 directory_modules = os.path.expanduser("~/MyProjects/woodworker_project_manager/server/src/modules")
 
@@ -78,8 +80,8 @@ def write_service():
     service_file.write(f"\t) {{}}\n\n")
     service_file.write(f"}}")
 
-write_entity()
-write_interface()
+# write_entity()
+# write_interface()
 
 create_module_directory()
 

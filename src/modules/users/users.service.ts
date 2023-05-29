@@ -59,4 +59,8 @@ export class UsersService {
     const hash = await bcrypt.hash(password, saltRounds)
     return hash
   }
+
+  async getUserAnalytics(): Promise<string> {
+    return "FUCKYOU"
+  }
 }
