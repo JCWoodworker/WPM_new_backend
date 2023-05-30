@@ -2,6 +2,10 @@ import { Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 import { DeleteResult, Repository, UpdateResult } from 'typeorm'
 import * as bcrypt from 'bcrypt'
+<<<<<<< HEAD
+=======
+import { getManager } from 'typeorm'
+>>>>>>> preprod
 
 import { UserInterface } from '../../database/interfaces/user.interface'
 import { UserEntity } from 'src/database/entities/User.entity'
@@ -58,5 +62,28 @@ export class UsersService {
     const saltRounds = 10
     const hash = await bcrypt.hash(password, saltRounds)
     return hash
+  }
+
+  async getUserAnalytics(): Promise<string> {
+  // This is the query that will be used to get the user analytics.  It is currently a work in progress.
+  //  Thinking about using one single query to get all user information and then using the data to create the analytics.
+  
+  //   const entityManager = getManager()
+  //   const query = `
+  //   WITH userAndProject AS (
+  //     SELECT
+  //       COUNT(projects.name) as projectCount
+  //     FROM
+  //       users
+  //     JOIN
+  //       projects ON CAST(users."userId" AS VARCHAR) = projects."userId"
+  //   )
+  //   SELECT *
+  //   FROM userAndProject;
+  // `
+
+  //   const results = await entityManager.query(query)
+    return 'no results yet ... still under construction'
+    // return results[0]
   }
 }
