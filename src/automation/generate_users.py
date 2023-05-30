@@ -4,13 +4,9 @@ import json
 # This seeds a list of fake users to the database for testing login and registration
 
 usernames = [
-    "fakeUser0",
-    "fakeUser1",
-    "fakeUser2",
-    "fakeUser3",
-    "fakeUser4",
-    "fakeUser5",
-    "fakeUser6",
+    "fakeuser1",
+    "fakeuser2",
+    "fakeuser3",
 ]
 
 for username in usernames:
@@ -19,12 +15,12 @@ for username in usernames:
         'Content-Type': 'application/json'
     }
     payload = json.dumps({
-        "firstName": "Johnnyfake",
-        "lastName": "Fakeuser",
+        "firstName": f"{username}",
+        "lastName": "Lastname",
         "email": f"{username}@user.com",
         "cellPhone": "1234567890",
         "username": f"{username}",
-        "password": "fakePassword",
+        "password": f"{username}",
         "userType": "user"
     })
     response = requests.request("POST", url, headers=headers, data=payload)
