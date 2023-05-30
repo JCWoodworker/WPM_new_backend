@@ -3,7 +3,6 @@ export interface ProjectInterface {
   name?: string;
   customerId?: number;
   userId?: string;
-  description?: string;
   quantity?: number;
   laborHours?: number;
   stage?: string;

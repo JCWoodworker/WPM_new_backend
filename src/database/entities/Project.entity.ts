@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
+import { UserEntity } from './User.entity';
 
 @Entity({ name: 'projects' })
 export class ProjectEntity {
@@ -11,8 +12,9 @@ export class ProjectEntity {
   @Column({ nullable: true })
   customerId: number;
 
-  @Column({})
-  userId: string;
+  @ManyToOne(() => UserEntity)
+  @JoinColumn({ name: "userId", referencedColumnName: "userId"})
+  user: UserEntity
 
   @Column({})
   description: string;
