@@ -25,14 +25,5 @@
   "region": "na",
   "jankaHardness": 3000,
   "imageUrl": "somewhere"
-  },
-  {
-  "id": "9ff97e73-3431-4400-a52e-cfcc66bae2ff",
-  "name": "hw004",
-  "price": "6",
-  "priceType": "lf",
-  "region": "na",
-  "jankaHardness": 2000,
-  "imageUrl": "somewhere"
   }
-  ]
+]
