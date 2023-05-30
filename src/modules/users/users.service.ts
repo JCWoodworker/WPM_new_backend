@@ -79,7 +79,7 @@ export class UsersService {
   // `
 
   //   const results = await entityManager.query(query)
+  // return results[0]
     return 'no results yet ... still under construction'
-    // return results[0]
   }
 }

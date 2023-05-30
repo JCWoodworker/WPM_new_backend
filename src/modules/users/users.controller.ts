@@ -36,6 +36,7 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @Get('analytics')
   async getUserAnalytics(@Req() req): Promise<any> {
+    debugger
     return this.usersService.getUserAnalytics()
   }
 
